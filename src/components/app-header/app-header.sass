@@ -1,0 +1,53 @@
+@import '../style_vars.sass'
+
+header
+    background-color: $blocksColor
+    display: grid
+    align-items: center
+    justify-items: center
+    .logo_container
+        position: relative
+        border-radius: 50%
+        background-color: white
+        .logo
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+    nav
+        margin: 0 auto
+        display: grid
+        align-items: center
+        justify-items: left
+        .menu_option
+            position: relative
+            border-radius: 7px
+            background-color: $backgroundColor
+            font-weight: 600
+            color: $textColor
+            a
+                width: 100%
+                display: block
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+
+@media (min-width: 1024px)
+    header
+        grid-template-columns: 0.2fr 0.8fr
+        .logo_container
+            height: 50px
+            width: 50px
+            font-size: 1.8rem
+            .logo
+                font-size: 1.8rem
+        nav
+            width: 75%
+            height: 70px
+            grid-template-columns: repeat(2, 1fr)
+            gap: 20px
+            .menu_option
+                width: 200px
+                height: 50px
+                font-size: 1.3rem

@@ -1,0 +1,26 @@
+@import "../style_vars.sass"
+
+.countries_block
+    background-color: white
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    gap: 30px
+    font-size: 1.4rem
+    .random_country
+        grid-row-start: 1
+        grid-row-end: 2
+        grid-column-start: 1
+        grid-column-end: 3
+    .country_list_container
+        grid-row-start: 2
+        grid-row-end: 3
+        padding: 30px 5px 30px 5px
+        background-color: lightgrey
+        min-height: 300px
+    .country_facts_container
+        grid-row-start: 2
+        grid-row-end: 3
+        padding: 30px 5px 30px 5px
+        background-color: salmon
+        min-height: 300px
