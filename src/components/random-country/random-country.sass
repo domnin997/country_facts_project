@@ -1,0 +1,73 @@
+@import "../style_vars.sass"
+
+.random_country_container
+    margin: 0 auto
+    .country_wrapper
+        display: grid
+        margin: 0 auto
+        background-color: $blocksColor
+        border-radius: 10px
+        .country_name
+            color: $backgroundColor
+            font-weight: 600
+        .country_flag
+                background-color: lightblue
+                position: relative
+                border-radius: 0 10px 0 10px
+                img, p
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                img
+                    transform: translate(-50%, -80%)
+                    object-fit: contain
+                p
+                    transform: translate(-50%, 0%)
+        .country_facts_wrapper
+            position: relative
+            background-color: lightblue
+            border-radius: 10px 0 10px 0
+            .country_facts
+                width: 100%
+                margin: 0
+                padding: 0
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                list-style-type: none
+    .country_update
+        margin-top: 30px
+        width: 150px
+        height: 50px
+        border: none
+        outline: none
+        background-color: $blocksSecColor
+        color: $backgroundColor
+        transition-duration: 0.5s
+        border-radius: 6px   
+    .country_update:hover
+        background-color: $textColor
+        cursor: pointer
+
+@media (min-width: 1024px)
+    .random_country_container
+        max-width: 60%
+        min-height: 350px
+        .country_wrapper
+            max-width: 95%
+            min-height: 300px
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-rows: 0.2fr 0.8fr
+            gap: 10px
+            .country_flag
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 2
+                grid-row-end: 3
+            .country_name
+                padding-top: 20px
+                grid-column-start: 1
+                grid-column-end: 3
+                grid-row-start: 1
+                grid-row-end: 2

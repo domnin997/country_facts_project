@@ -1,0 +1,88 @@
+.random_country_container {
+  margin: 0 auto;
+}
+.random_country_container .country_wrapper {
+  display: grid;
+  margin: 0 auto;
+  background-color: rgb(27, 79, 100);
+  border-radius: 10px;
+}
+.random_country_container .country_wrapper .country_name {
+  color: rgb(235, 223, 201);
+  font-weight: 600;
+}
+.random_country_container .country_wrapper .country_flag {
+  background-color: lightblue;
+  position: relative;
+  border-radius: 0 10px 0 10px;
+}
+.random_country_container .country_wrapper .country_flag img, .random_country_container .country_wrapper .country_flag p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.random_country_container .country_wrapper .country_flag img {
+  transform: translate(-50%, -80%);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.random_country_container .country_wrapper .country_flag p {
+  transform: translate(-50%, 0%);
+}
+.random_country_container .country_wrapper .country_facts_wrapper {
+  position: relative;
+  background-color: lightblue;
+  border-radius: 10px 0 10px 0;
+}
+.random_country_container .country_wrapper .country_facts_wrapper .country_facts {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style-type: none;
+}
+.random_country_container .country_update {
+  margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: rgb(87, 118, 121);
+  color: rgb(235, 223, 201);
+  transition-duration: 0.5s;
+  border-radius: 6px;
+}
+.random_country_container .country_update:hover {
+  background-color: rgb(140, 121, 106);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .random_country_container {
+    max-width: 60%;
+    min-height: 350px;
+  }
+  .random_country_container .country_wrapper {
+    max-width: 95%;
+    min-height: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.2fr 0.8fr;
+    gap: 10px;
+  }
+  .random_country_container .country_wrapper .country_flag {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .random_country_container .country_wrapper .country_name {
+    padding-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}

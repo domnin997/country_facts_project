@@ -1,0 +1,58 @@
+.countries_list_wrapper {
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
+  max-width: 90%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  row-gap: 15px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.countries_list_wrapper .countries_list_item {
+  height: 150px;
+  font-size: 1rem;
+  position: relative;
+  background-color: rgb(235, 223, 201);
+  border-radius: 6px;
+  box-shadow: 0px 10px 12px 8px rgb(198, 198, 198);
+  transition-duration: 0.5s;
+}
+.countries_list_wrapper .countries_list_item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.countries_list_wrapper .countries_list_item div {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(27, 79, 100);
+  color: rgb(235, 223, 201);
+  border-radius: 6px;
+}
+.countries_list_wrapper .countries_list_item:hover {
+  box-shadow: 0px 10px 20px 15px rgb(198, 198, 198);
+  cursor: pointer;
+}
+
+.button_container .load_more {
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: rgb(87, 118, 121);
+  color: rgb(235, 223, 201);
+  transition-duration: 0.5s;
+  border-radius: 6px;
+}
+.button_container .load_more:hover {
+  background-color: rgb(140, 121, 106);
+  cursor: pointer;
+}

@@ -2,6 +2,8 @@ import './app-countries.css';
 import { useCountriesService } from '../services/CountriesService.js';
 import { useState, useEffect } from 'react';
 import RandomCountry from '../random-country/random-country';
+import CountriesList from '../countries-list/countries-list';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary.js';
 
 const AppCountries = function () {
 
@@ -28,21 +30,23 @@ const AppCountries = function () {
             .then(onCountryLoaded);
     }
 
-    // console.log(`State is ${country}`)
-
     return (
         <main className="countries_block">
             
-            <section className="random_country">
-                <RandomCountry/> 
+            <section className="random_country_block">
+                <ErrorBoundary>
+                    <RandomCountry/>
+                </ErrorBoundary>
             </section>
 
-            <section className="country_list_container">
-                Тут контейнер для списка стран
+            <section className="country_list_block">
+                <ErrorBoundary>
+                    <CountriesList/>
+                </ErrorBoundary>
             </section>
             
             <section className="country_facts_container">
-                Тут контейнер для фактов
+                
             </section>
         </main>
     )
